@@ -37,6 +37,7 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: min(1000px, 100%);
 }
 .title-container {
   margin-bottom: 2rem;
@@ -130,5 +131,11 @@ button {
   }
   .timer-container {
     margin-bottom: 1em;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .content {
+    padding-inline-start: 1em;
   }
 }
