@@ -24,7 +24,7 @@ button {
 }
 
 .container {
-  min-height: 100vh;
+  min-height: 100dvh;
   max-width: 1200px;
   margin: 0 auto;
   padding: clamp(0.5em, 1.5vw, 1.5em);
@@ -64,7 +64,7 @@ button {
   text-align: center;
   border-radius: 5px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 1em;
   padding: clamp(0.2em, 1vw, 1em);
 }
@@ -90,7 +90,7 @@ button {
   gap: 3px;
 }
 .time > p {
-  margin-block: 5px;
+  margin-block: 5px 0;
   font-size: clamp(0.7rem, 1vw, 1.1rem);
   color: var(--clr-accent);
   font-weight: 500;
@@ -110,7 +110,7 @@ button {
   font-weight: bold;
   font-size: 1.1rem;
 }
-
+/* 
 .shop-now-btn {
   background-color: var(--clr-accent);
   padding: 0.5em 1.5em;
@@ -119,7 +119,7 @@ button {
   color: var(--clr-accent-light);
   place-self: center;
   margin-bottom: 1em;
-}
+} */
 
 @media screen and (max-width: 768px) {
   .content-container {
@@ -127,5 +127,8 @@ button {
   }
   .content {
     text-align: center;
+  }
+  .timer-container {
+    margin-bottom: 1em;
   }
 }
