@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@400;500;600;700&family=Roboto+Condensed:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;700&family=Playfair+Display:wght@400;500;600;700&family=Roboto+Condensed:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap");
 
 :root {
   --clr-dark: #140001;
@@ -68,12 +68,17 @@ button {
   gap: 1em;
   padding: clamp(0.2em, 1vw, 1em);
 }
+
 .content {
   font-family: "Playfair Display", serif;
   color: var(--clr-accent);
   letter-spacing: 1px;
   font-weight: 500;
-  font-size: clamp(1.1rem, 2vw, 2.7rem);
+  font-size: clamp(1.2rem, 1.7vw, 2.5rem);
+  text-align: left;
+}
+.content p {
+  margin-block: 10px;
 }
 .timer-container {
   display: grid;
@@ -86,7 +91,7 @@ button {
 }
 .time > p {
   margin-block: 5px;
-  font-size: clamp(0.7rem, 1.5vw, 1.7rem);
+  font-size: clamp(0.7rem, 1vw, 1.1rem);
   color: var(--clr-accent);
   font-weight: 500;
 }
@@ -96,12 +101,14 @@ button {
   font-style: 1.1rem;
   display: grid;
   place-items: center;
-  padding: 0.5em;
+  padding: 0.4em 0.6em;
 }
 .number p {
   margin-block: 0;
-  font-weight: 600;
   color: var(--clr-accent-light);
+  font-family: "DM Serif Display", serif;
+  font-weight: bold;
+  font-size: 1.1rem;
 }
 
 .shop-now-btn {
@@ -117,5 +124,8 @@ button {
 @media screen and (max-width: 768px) {
   .content-container {
     grid-template-columns: 1fr;
+  }
+  .content {
+    text-align: center;
   }
 }
