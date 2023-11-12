@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@400;500;600;700&family=Roboto+Condensed:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap");
+
+:root {
+  --clr-dark: #140001;
+  --clr-accent: #c73c45;
+  --clr-accent-light: #fff2f3;
+  --clr-accent-light2: #e7d9d8;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--clr-accent-light);
+  font-family: "Inter", sans-serif;
+}
+img {
+  max-width: 100%;
+}
+button {
+  border: none;
+  outline: none;
+}
+
+.container {
+  min-height: 100vh;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: clamp(0.5em, 1.5vw, 1.5em);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.title-container {
+  margin-bottom: 2rem;
+  border-bottom: clamp(0.35em, 1vw, 0.7em) solid var(--clr-accent);
+  width: 100%;
+  text-align: center;
+}
+
+.title {
+  text-transform: uppercase;
+  font-size: clamp(1.7rem, 4vw, 5rem);
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 600;
+  color: var(--clr-dark);
+  letter-spacing: 2px;
+}
+.image-container {
+  width: min(100%, 50ch);
+  margin: 1em auto 0;
+}
+
+.content-container {
+  background-color: var(--clr-accent-light2);
+  width: 100%;
+  text-align: center;
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1em;
+  padding: clamp(0.2em, 1vw, 1em);
+}
+.content {
+  font-family: "Playfair Display", serif;
+  color: var(--clr-accent);
+  letter-spacing: 1px;
+  font-weight: 500;
+  font-size: clamp(1.1rem, 2vw, 2.7rem);
+}
+.timer-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  place-items: center;
+}
+.numbers-container {
+  display: flex;
+  gap: 3px;
+}
+.time > p {
+  margin-block: 5px;
+  font-size: clamp(0.7rem, 1.5vw, 1.7rem);
+  color: var(--clr-accent);
+  font-weight: 500;
+}
+.number {
+  background-color: var(--clr-accent);
+  border-radius: 3px;
+  font-style: 1.1rem;
+  display: grid;
+  place-items: center;
+  padding: 0.5em;
+}
+.number p {
+  margin-block: 0;
+  font-weight: 600;
+  color: var(--clr-accent-light);
+}
+
+.shop-now-btn {
+  background-color: var(--clr-accent);
+  padding: 0.5em 1.5em;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  color: var(--clr-accent-light);
+  place-self: center;
+  margin-bottom: 1em;
+}
+
+@media screen and (max-width: 768px) {
+  .content-container {
+    grid-template-columns: 1fr;
+  }
+}
