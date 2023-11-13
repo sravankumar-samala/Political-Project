@@ -1,7 +1,7 @@
 const daysEl1 = document.getElementById('days-1')
 const daysEl2 = document.getElementById('days-2')
 const hoursEl1 = document.getElementById('hours-1')
-const hoursEl2 = document.getElementById('hours-1')
+const hoursEl2 = document.getElementById('hours-2')
 const minutesEl1 = document.getElementById('minutes-1')
 const minutesEl2 = document.getElementById('minutes-2')
 const secondsEL1 = document.getElementById('seconds-1')
@@ -32,6 +32,7 @@ function tick() {
 
         const seconds = formatTime(Math.floor((diff % (1000 * 60)) / 1000))
 
+        // console.log(days, hours, minutes, seconds)
 
         // updating dom values
         updateElement(daysEl1, days.charAt(0))
