@@ -80,9 +80,7 @@ button {
   color: var(--clr-accent);
   letter-spacing: 1px;
   font-weight: 600;
-  /* font-size: clamp(1.2rem, 1.7vw, 2.5rem); */
   font-size: clamp(1.2rem, 1.5vw, 2.7rem);
-  /* text-align: left; */
 }
 .content p {
   margin-block: 0;
@@ -118,16 +116,6 @@ button {
   font-weight: bold;
   font-size: 1.1rem;
 }
-/* 
-.shop-now-btn {
-  background-color: var(--clr-accent);
-  padding: 0.5em 1.5em;
-  font-size: 1.1rem;
-  border-radius: 5px;
-  color: var(--clr-accent-light);
-  place-self: center;
-  margin-bottom: 1em;
-} */
 
 @media screen and (max-width: 768px) {
   .content-container {
@@ -140,9 +128,3 @@ button {
     margin-bottom: 1em;
   }
 }
-/* 
-@media screen and (min-width: 769px) {
-  .content {
-    padding-inline-start: 1em;
-  }
-} */
