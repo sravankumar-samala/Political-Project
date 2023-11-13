@@ -7,42 +7,43 @@ const minutesEl2 = document.getElementById('minutes-2')
 const secondsEL1 = document.getElementById('seconds-1')
 const secondsEL2 = document.getElementById('seconds-2')
 
+function formatTime(value) {
+    return value < 10 ? '0' + value : value.toString();
+}
 
-let electionDate = new Date('Dec 3, 2023 12:00:00').getTime()
+function updateElement(element, value) {
+    element.textContent = value;
+}
 
-let timer = setInterval(tick, 1000);
+const electionDate = new Date('Dec 3, 2023 12:00:00').getTime()
+
+const timer = setInterval(tick, 1000);
 
 function tick() {
-    let now = new Date().getTime()
-    let diff = electionDate - now
+    const now = new Date().getTime()
+    const diff = electionDate - now
 
     if (diff > 0) {
-        let days = Math.floor(diff / (1000 * 60 * 60 * 24))
-        days = days < 10 ? '0' + days : days.toString()
+        const days = formatTime(Math.floor(diff / (1000 * 60 * 60 * 24)))
 
-        let hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
-        hours = hours < 10 ? '0' + hours : hours.toString()
+        const hours = formatTime(Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)))
 
-        let minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60))
-        minutes = minutes < 10 ? '0' + minutes : minutes.toString()
+        const minutes = formatTime(Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60)))
 
-
-        let seconds = Math.floor((diff % (1000 * 60)) / 1000)
-        seconds = seconds < 10 ? '0' + seconds : seconds.toString()
+        const seconds = formatTime(Math.floor((diff % (1000 * 60)) / 1000))
 
 
-        // console.log(days, hours, minutes, seconds)
-        daysEl1.textContent = days.charAt(0);
-        daysEl2.textContent = days.charAt(1);
-        hoursEl1.textContent = hours.charAt(0);
-        hoursEl2.textContent = hours.charAt(1);
-        minutesEl1.textContent = minutes.charAt(0);
-        minutesEl2.textContent = minutes.charAt(1);
-        secondsEL1.textContent = seconds.charAt(0);
-        secondsEL2.textContent = seconds.charAt(1);
+        // updating dom values
+        updateElement(daysEl1, days.charAt(0))
+        updateElement(daysEl2, days.charAt(1))
+        updateElement(hoursEl1, hours.charAt(0))
+        updateElement(hoursEl2, hours.charAt(1))
+        updateElement(minutesEl1, minutes.charAt(0))
+        updateElement(minutesEl2, minutes.charAt(1))
+        updateElement(secondsEL1, seconds.charAt(0))
+        updateElement(secondsEL2, seconds.charAt(1))
 
     } else {
         clearInterval(timer)
     }
-
 }

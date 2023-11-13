@@ -28,16 +28,21 @@ button {
   max-width: 1200px;
   margin: 0 auto;
   padding: clamp(0.5em, 1.5vw, 1.5em);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  /* display: flex; */
+  /* flex-direction: column;
+  align-items: center; */
+  display: grid;
+  grid-template-rows: auto 1fr;
 }
 
 .main-container {
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
+  display: grid;
+  grid-template-rows: 1fr auto;
   align-items: center;
   width: min(1000px, 100%);
+  margin: 0 auto;
 }
 .title-container {
   margin-bottom: 2rem;
@@ -74,7 +79,7 @@ button {
   font-family: "Playfair Display", serif;
   color: var(--clr-accent);
   letter-spacing: 1px;
-  font-weight: 500;
+  font-weight: 600;
   font-size: clamp(1.2rem, 1.7vw, 2.5rem);
   text-align: left;
 }
